@@ -5,11 +5,6 @@
 <h1>Home</h1>
 {% if user.is_authenticated %}
 <p>Hi {{ user.username }}!</p>
-<p><a href="{% url 'logout' %}">Log Out</a></p>
 <img class="girl-image" src="{% static 'images/girlsnap.jpg' %}">
-{% else %}
-<p>You are not logged in.</p>
-<p><a href="{% url 'login' %}">Log In</a></p>
-<p><a href="{% url 'signup' %}">Sign Up</a></p>
 {% endif %}
 {% endblock content %}

@@ -54,14 +54,14 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link p-2 text-dark" href="{% url 'logout' %}">Log Out</a>
+                        <a class="nav-link p-2 text-dark" href="{% url 'account_logout' %}">Log Out</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link p-2 text-dark" href="{% url 'login' %}">Log In</a>
+                        <a class="nav-link p-2 text-dark" href="{% url 'account_login' %}">Log In</a>
                     </li>
                     <li class="nav-item">
-                        <button type="button" class="btn btn-outline-primary"><a class="nav-link ml-2" href="{% url 'signup' %}">Sign Up</a></button>
+                        <button type="button" class="btn btn-outline-primary"><a class="nav-link ml-2" href="{% url 'account_signup' %}">Sign Up</a></button>
                     </li>
                     {% endif %}
                 </ul>
@@ -70,7 +70,7 @@
 
         <!-- Main Content Section -->
         <main>
-            <div class="container-fluid">
+            <div class="container">
                 {% block content %}
                 <!-- Content will be rendered here -->
                 {% endblock content %}
